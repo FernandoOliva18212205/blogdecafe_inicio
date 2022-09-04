@@ -62,8 +62,14 @@ img{
 }
 
 /*Header*/
-.header{
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
     background-image: url(../img/banner.jpg);
+}
+.header{
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,6 +152,7 @@ img{
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
+    border: none;
 }
 
 .boton--primario{
@@ -157,6 +164,9 @@ img{
     .boton{
         display: inline-block;
     }
+}
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton--secundario{
@@ -235,13 +245,28 @@ img{
 }
 
 .formulario{
-
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
 }
 
 .campo{
-
+    display: flex;
+    margin-bottom: 2rem;
+    gap:2rem
 }
 
 .campo__label{
+flex: 0 0 9rem;
+text-align: right;
+}
 
+.campo__field{
+flex: 1;
+border: 1px solid var(--gris);
+}
+
+.campo__field--textarea{
+height: 20rem;
 }
